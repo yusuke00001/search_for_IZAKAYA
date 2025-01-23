@@ -28,7 +28,7 @@
   <body>
     <%= flash.each do |key, messages| %>
       <div class="alert" <%= key == "notice" ? "alert-success" : "alert-danger" %>>
-        <%= if messages.is_a?(Array)%>
+        <% if messages.is_a?(Array)%>
           <%= messages.each do |messages| %>
             <li><%= message %></li>
           <% end %>
