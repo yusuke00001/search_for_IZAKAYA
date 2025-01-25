@@ -1,4 +1,5 @@
 class UserSessionsController < ApplicationController
+  skip_before_action :require_sign_in, only: [ :new, :create, :destroy ]
   before_action :set_user, only: [ :create ]
   def new
   end
@@ -12,7 +13,12 @@ class UserSessionsController < ApplicationController
       flash.now[:alert] = @user.errors.full_messages
       render :new, status: :unprocessable_entity
     end
-    binding.pry
+  end
+
+  def destroy
+    sign_out
+    flash[:notice] = "ログアウトされました"
+    redirect_to login_path
   end
 
   private
@@ -26,10 +32,5 @@ class UserSessionsController < ApplicationController
   rescue
     flash.now[:alert] = "登録されていないメールアドレスです"
     render :new, status: :unprocessable_entity
-  end
-
-  def destroy
-    sign_out
-    redirect_to login_path
   end
 end

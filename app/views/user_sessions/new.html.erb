@@ -16,3 +16,6 @@
     <% end %>
   </div>
 </div>
+<% if signed_in? %>
+  <%= link_to "ログアウト", logout_path , data: { turbo_method: :delete } %>
+<% end %>
