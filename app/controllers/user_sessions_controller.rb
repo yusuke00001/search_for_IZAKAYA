@@ -1,5 +1,4 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_sign_in, only: [ :new, :create, :destroy ]
   before_action :set_user, only: [ :create ]
   def new
   end
