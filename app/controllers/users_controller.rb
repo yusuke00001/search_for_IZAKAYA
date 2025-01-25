@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
-      redirect_to # login_path
+      redirect_to login_path
     else
       flash.now[:alert] = @user.errors.full_messages
       render :new, status: :unprocessable_entity

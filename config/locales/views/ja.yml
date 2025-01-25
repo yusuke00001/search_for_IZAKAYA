@@ -1,4 +1,12 @@
 ja:
+  helpers:
+    label:
+      email: メールアドレス
+      password: パスワード
   users:
     new:
       title: 新規登録
+  user_sessions:
+    new:
+      title: ログイン画面
+  
