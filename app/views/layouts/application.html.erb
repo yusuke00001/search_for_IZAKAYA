@@ -26,6 +26,18 @@
   </head>
 
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
+        <% if signed_in? %>
+          <ul class="navbar-nav ms-5 align-items-center">
+            <li>ようこそ！@  <strong><%= @current_user.name %></strong> さん</li>
+          </ul>
+          <ul class="navbar-nav ms-auto me-5 align-items-center">
+            <li><%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete }%></li>
+          </ul>
+        <% end %>
+      </nav>  
+    </header>
     <% flash.each do |key, messages| %>
       <div class="alert <%= key == "notice" ? "alert-success" : "alert-danger" %>">
         <% if messages.is_a?(Array)%>
