@@ -6,6 +6,8 @@ ja:
   users:
     new:
       title: 新規登録
+      submit: 登録
+      login: ログインはこちら
   user_sessions:
     new:
       title: ログイン画面
