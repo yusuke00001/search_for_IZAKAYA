@@ -11,4 +11,6 @@ ja:
   user_sessions:
     new:
       title: ログイン画面
+      login: ログイン
+      submit: 新規登録はこちら
   
