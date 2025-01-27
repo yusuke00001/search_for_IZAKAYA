@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
   before_action :set_current_user
   before_action :require_sign_in
+  helper_method :signed_in?
 
   def sign_in(user)
     remember_token = User.new_remember_token
