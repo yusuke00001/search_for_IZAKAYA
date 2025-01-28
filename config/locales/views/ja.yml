@@ -8,11 +8,12 @@ ja:
       new:
         title: 新規登録
         submit: 登録
+    sessions:
+      new:
+        title: ログイン
+        login: ログイン
     shared:
       links:
         login: ログインはこちら
-  user_sessions:
-    new:
-      title: ログイン画面
-      login: ログイン
-      submit: 新規登録はこちら
+        register: 新規登録はこちら
+        foget_password: パスワードを忘れた方はこちら
