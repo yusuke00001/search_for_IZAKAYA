@@ -4,13 +4,15 @@ ja:
       email: メールアドレス
       password: パスワード
   users:
-    new:
-      title: 新規登録
-      submit: 登録
-      login: ログインはこちら
+    registrations:
+      new:
+        title: 新規登録
+        submit: 登録
+    shared:
+      links:
+        login: ログインはこちら
   user_sessions:
     new:
       title: ログイン画面
       login: ログイン
       submit: 新規登録はこちら
-  
